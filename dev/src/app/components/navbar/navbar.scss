@@ -1,3 +1,52 @@
-.acme-navbar-text{
-  color: white;
+.acme-navbar-text {
+  color: #fff;
+}
+
+.navbar {
+  background-color: #fff;
+  height: 70px;
+  h1 {
+    background: transparent url(/assets/images/mkt.png) 70px 0 no-repeat;
+    height: 50px;
+    margin: 10px 0;
+    padding: 0;
+    text-indent: -9999px;
+  }
+  .navbar-nav {
+    > li {
+      > a {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-nav {
+    float: right;
+    margin-right: 60px;
+    > li  {
+      > a {
+        padding-top: 25px;
+        padding-bottom: 25px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px ) and (max-width: 921px) {
+  .navbar-header {
+    width: 35%;
+    h1 {
+      background-position-x: 30px;
+    }
+  }
+  .navbar-nav {
+    margin-right: 10px;
+    > li {
+      > a {
+        font-size: 14px;
+      }
+    }
+  }
 }

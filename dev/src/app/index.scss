@@ -33,3 +33,9 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
  */
 // injector
 // endinjector
+
+div[ng-view] {
+  > .container-fluid {
+    padding: 0;
+  }
+}

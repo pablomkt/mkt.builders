@@ -1,9 +1,25 @@
-(function() {
+(function () {
   'use strict';
-
   angular
     .module('dev')
-    .directive('acmeNavbar', acmeNavbar);
+    .directive('scrollOnClick', function () {
+      return {
+        restrict: 'A',
+        link: function (scope, $elm, attrs) {
+          var idToScroll = attrs.href;
+          $elm.on('click', function () {
+            var $target;
+            if (idToScroll) {
+              $target = $(idToScroll);
+            } else {
+              $target = $elm;
+            }
+            $("body").animate({scrollTop: $target.offset().top}, "slow");
+          });
+        }
+      }
+    })
+    .directive('mktNavbar', acmeNavbar);
 
   /** @ngInject */
   function acmeNavbar() {
@@ -11,7 +27,7 @@
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',
       scope: {
-          creationDate: '='
+        creationDate: '='
       },
       controller: NavbarController,
       controllerAs: 'vm',

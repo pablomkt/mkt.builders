@@ -1,0 +1,267 @@
+.jumbotron {
+  border-radius: 0 !important;
+  padding-top: 68px;
+  padding-bottom: 68px;
+  font-family: 'Lato', sans-serif;
+
+  &.footer {
+    background: #939393;
+    color: #fff;
+    font-weight: 300;
+    height: 170px;
+    margin-bottom: 0;
+    padding-top: 30px;
+    h4, h5 {
+      margin: 0;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+  }
+
+  &.how {
+    background: #fff;
+    color: #878787;
+    height: 320px;
+    padding: 20px;
+    .arrow {
+      font-size: 30px;
+      margin-top: 55px;
+    }
+    .contact-button {
+      margin-top: 60px;
+    }
+    h2 {
+      font-size: 40px;
+      font-weight: 300;
+      margin-bottom: 40px;
+      span {
+        display: block;
+        font-size: 20px;
+        font-weight: 100;
+      }
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: 300;
+      margin: 20px auto 10px auto;
+      width: 180px;
+      span {
+        background: transparent url(/assets/images/triplicate.png) center 0 no-repeat;
+        background-size: cover;
+        display: block;
+        height: 85px;
+        margin: 0 auto;
+        width: 155px;
+      }
+      &.publish {
+        span {
+          background-position-y: -533px;
+        }
+      }
+      &.check-progress {
+        span {
+          background-position-y: -625px;
+        }
+      }
+
+      &.arrow {
+        width: 20px;
+        span {
+          background-position-y: -280px;
+          width: 105px;
+          height: 71px;
+        }
+      }
+    }
+    p {
+      font-size: 11px;
+      font-weight: 300;
+      &.contact {
+        margin-top: 55px;
+      }
+    }
+  }
+
+  &.why {
+    background: transparent url(/assets/images/bg.why.jpg) 0 0 no-repeat;
+    background-size: cover;
+    color: #fff;
+    height: 760px;
+    padding: 20px;
+    > div {
+      margin-top: 30px;
+    }
+    .contact-button {
+      margin-top: 60px;
+    }
+
+    h2 {
+      font-size: 40px;
+      font-weight: 300;
+      margin-bottom: 40px;
+      span {
+        display: block;
+        font-size: 20px;
+        font-weight: 100;
+      }
+    }
+
+    h3 {
+      font-size: 24px;
+      font-weight: 300;
+      margin: 20px auto 0 auto;
+      width: 290px;
+      span {
+        background: transparent url(/assets/images/triplicate.png) center 0 no-repeat;
+        background-size: cover;
+        display: block;
+        height: 85px;
+        margin: 0 auto;
+        width: 155px;
+      }
+      &.review-progress {
+        span {
+          background-position-y: -163px;
+        }
+      }
+      &.value {
+        span {
+          background-position-y: -230px;
+        }
+      }
+      &.country {
+        span {
+          background-position-y: -303px;
+        }
+      }
+      &.price {
+        span {
+          background-position-y: -373px;
+        }
+      }
+    }
+    p {
+      font-size: 14px;
+      font-weight: 300;
+      margin: 0 auto;
+      width: 340px;
+      &.disclaimer {
+        font-size: 18px;
+        margin-bottom: 20px;
+        width: 690px;
+      }
+    }
+  }
+
+  &.triplicate {
+    background: #fff;
+    color: #878787;
+    height: 420px;
+    padding: 20px;
+    .contact-button {
+      margin-top: 60px;
+    }
+    h2 {
+      font-size: 40px;
+      font-weight: 300;
+      margin-bottom: 40px;
+      span {
+        display: block;
+        font-size: 20px;
+        font-weight: 100;
+      }
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: 300;
+      margin: 20px auto 10px auto;
+      width: 250px;
+      span {
+        background: transparent url(/assets/images/triplicate.png) center 0 no-repeat;
+        background-size: cover;
+        display: block;
+        height: 85px;
+        margin: 0 auto;
+        width: 155px;
+      }
+      &.multiple {
+        span {
+          background-position-y: -83px;
+        }
+      }
+    }
+    p {
+      font-size: 11px;
+      font-weight: 300;
+    }
+  }
+
+  &.contact {
+    background: transparent url(/assets/images/bg.contact.jpg) 0 0 no-repeat;
+    background-size: cover;
+    height: 720px;
+    h2 {
+      color: #fff;
+      font-size: 45px;
+      font-weight: 100;
+      margin-top: 200px;
+      margin-bottom: 0;
+      width: 310px;
+      span {
+        color: #a09feb;
+        display: block;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 102px;
+        font-weight: 400;
+        line-height: 90px;
+      }
+    }
+    p {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: left;
+      width: 312px;
+    }
+  }
+
+  .btn-success {
+    color: #fff;
+    background-color: #a09feb;
+    border-color: #8b8aec;
+    &:hover {
+      background-color: #6c6aed;
+      border-color: #5e5dec;
+    }
+  }
+}
+
+@media (min-width: 400px) and (max-width: 752px) {
+  .jumbotron.contact {
+    height: 540px;
+  }
+
+  .jumbotron.triplicate {
+    height: 630px;
+  }
+
+  .jumbotron.why {
+    height: 940px;
+    .disclaimer {
+      display: none;
+    }
+  }
+  .jumbotron.how {
+    height: 670px;
+  }
+}
+
+@media (min-width: 768px) {
+  .how {
+    .col-sm-offset-1 {
+      margin-left: 4.33333%;
+    }
+  }
+}
