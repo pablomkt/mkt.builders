@@ -1,4 +1,4 @@
-.jumbotron {
+.section-container {
   border-radius: 0 !important;
   padding-top: 68px;
   padding-bottom: 68px;
@@ -238,22 +238,39 @@
   }
 }
 
-@media (min-width: 400px) and (max-width: 752px) {
-  .jumbotron.contact {
+@media (min-width: 320px) and (max-width: 752px) {
+  .section-container.contact {
     height: 540px;
+    p {
+      width: 280px;
+    }
+    h2 {
+      font-size: 35px;
+      width: 240px;
+      span {
+        font-size: 78px;
+        line-height: 75px;
+      }
+    }
   }
 
-  .jumbotron.triplicate {
+  .section-container.triplicate {
     height: 630px;
   }
 
-  .jumbotron.why {
-    height: 940px;
+  .section-container.why {
+    height: 1040px;
+    h3 {
+      width: 240px;
+    }
+    p {
+      width: 250px;
+    }
     .disclaimer {
       display: none;
     }
   }
-  .jumbotron.how {
+  .section-container.how {
     height: 670px;
   }
 }
@@ -262,6 +279,52 @@
   .how {
     .col-sm-offset-1 {
       margin-left: 4.33333%;
+    }
+  }
+}
+
+.navbar {
+  z-index: 1;
+}
+
+#emailContact {
+  background: rgba(0, 0, 0, .7);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  .cerrarModal {
+    position: fixed;
+    color: #fff;
+    top: 80px;
+    left: 50%;
+  }
+  iframe {
+    width: 450px !important;
+    margin: 0 auto !important;
+    position: absolute;
+    left: 50%;
+    margin-left: -225px !important;
+    top: 90px;
+  }
+}
+
+
+
+@media (min-width: 320px) and (max-width: 752px) {
+
+  #emailContact {
+    .cerrarModal {
+      top: 10px;
+    }
+    iframe {
+      width: 320px!important;
+      margin: 0 auto 0 -160px!important;
+      position: absolute;
+      left: 50%;
+      top: 20px;
     }
   }
 }

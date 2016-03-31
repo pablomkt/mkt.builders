@@ -10,11 +10,11 @@
           $elm.on('click', function () {
             var $target;
             if (idToScroll) {
-              $target = $(idToScroll);
+              $target = angular.element(idToScroll);
             } else {
               $target = $elm;
             }
-            $("body").animate({scrollTop: $target.offset().top}, "slow");
+            angular.element("body").animate({scrollTop: $target.offset().top}, "slow");
           });
         }
       }
@@ -39,6 +39,10 @@
     /** @ngInject */
     function NavbarController(moment) {
       var vm = this;
+
+      vm.open = function () {
+        angular.element('#emailContact').removeClass('hidden');
+      };
 
       // "vm.creation" is avaible by directive option "bindToController: true"
       vm.relativeDate = moment(vm.creationDate).fromNow();

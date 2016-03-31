@@ -6,24 +6,27 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, toastr) {
+  function MainController($timeout) {
     var vm = this;
 
     vm.classAnimation = '';
-    vm.showToastr = showToastr;
 
     activate();
 
     function activate() {
       $timeout(function() {
-        vm.classAnimation = 'rubberBand';
+        vm.classAnimation = '';
       }, 4000);
     }
 
-    function showToastr() {
-      toastr.info('Envianos un email <a href="mailto:sales@mkt.builders"><b>sales@mkt.builders</b></a>');
-      vm.classAnimation = '';
-    }
+    angular.element('body').on('click', '.cerrarModal', function(e) {
+      e.preventDefault();
+      angular.element('#emailContact').addClass('hidden');
+    });
+
+    vm.open = function () {
+      angular.element('#emailContact').removeClass('hidden');
+    };
 
   }
 })();
